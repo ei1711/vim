@@ -50,12 +50,7 @@ set confirm             " 保存されていないファイルがある場合は
 set hidden              " 保存されていないファイルがある場合でも別のファイルを開くことが出来る
 set autoread            " 編集中のファイルが変更されたら自動で読み直す
 set noswapfile          " スワップファイルを作らない
-set backup              " ファイルのバックアップを有効にする
-set writebackup         " 編集前のファイルをバックアップファイルとする
-" $HOME/05_Backupをバックアップファイルの保存先とする
-set backupdir=$HOME/05_Backup
-" バックアップを取得するファイル名を「ファイル名.タイムスタンプ」とする
-au BufWritePre * let &bex = '.' . strftime("%Y%m%d_%H%M%S")
+set nobackup            " ファイルのバックアップを無効にする
 "------------------------
 
 "--- Search & Substitution ---
